@@ -31,7 +31,7 @@ const ImagePopup = (props) => {
       {/* Popup Container */}
       <div
         id="container"
-        className="fixed top-1/2 left-1/2 z-40 transform -translate-x-1/2 -translate-y-1/2 w-[95vw] sm:w-[85vw] md:w-[75vw] lg:w-[65vw] xl:w-[60vw] max-h-[90vh] overflow-y-auto rounded-2xl p-5 bg-white/70 dark:bg-black/70 shadow-2xl backdrop-blur-xl transition-all duration-300 ease-in-out"
+        className="fixed top-1/2 left-1/2 z-40 transform -translate-x-1/2 -translate-y-1/2 w-[95vw] sm:w-[85vw] md:w-[75vw] lg:w-[65vw] xl:w-[60vw] max-h-[90vh] overflow-y-auto rounded-2xl p-5 bg-white  shadow-2xl backdrop-blur-xl transition-all duration-300 ease-in-out"
       >
         {/* Close Button */}
         <RxCross2
@@ -47,7 +47,7 @@ const ImagePopup = (props) => {
         />
 
         {/* Author & Description */}
-        <div className="flex flex-col md:flex-row justify-between gap-4 px-2 mb-4 text-gray-800 dark:text-gray-200">
+        <div className="flex flex-col md:flex-row justify-between gap-4 px-2 mb-4 text-gray-800 ">
           <div>
             <p className="text-lg font-semibold">{props.name}</p>
             <p className="text-sm italic">{props.desc}</p>
@@ -59,10 +59,10 @@ const ImagePopup = (props) => {
 
         {/* Ingredients */}
         <div className="px-2 mb-4">
-          <h3 className="text-xl font-semibold mb-2 text-gray-700 dark:text-gray-100">
+          <h3 className="text-xl font-semibold mb-2 text-gray-700 ">
             Ingredients
           </h3>
-          <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-300 space-y-1">
+          <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
             {props.ingredients &&
               props.ingredients.split(",").map((item, index) => (
                 <li key={index}>{item.trim()}</li>
